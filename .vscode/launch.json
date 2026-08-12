@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "STM32F446RE Bootloader Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "D:/Documents/Bootloader/industrial-edge-node/build/bootloader/bootloader",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "serverpath": "C:/openocd/bin/openocd.exe",
+            "device": "STM32F446RE",
+            "configFiles": [
+                "board/st_nucleo_f4.cfg"
+            ],
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none"
+        }
+    ]
+}
