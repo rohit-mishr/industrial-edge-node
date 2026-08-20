@@ -12,5 +12,6 @@
 // RCC Bitmasks
 #define RCC_AHB1ENR_GPIOAEN             (1U << 0)   // Enable GPIOA clock
 #define RCC_APB1ENR_USART2EN            (1U << 17)  // Enable USART2 clock
+#define RCC_AHB1ENR_GPIOCEN             (1U << 2)   // Enable GPIOA clock
 
 #endif

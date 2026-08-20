@@ -18,8 +18,8 @@ void bootloader_uart_init(void) {
     // ==========================================
     // STEP 2: CONFIGURE GPIO 
     // ==========================================
-    MODER_A &= ~(GPIOA_PIN2_MODER_MSK | GPIOA_PIN3_MODER_MSK);
-    AFRL_A &= ~(GPIOA_PIN2_AFRL_MSK | GPIOA_PIN3_AFRL_MSK);
+    MODER_A &= (GPIOA_PIN2_MODER_MSK & GPIOA_PIN3_MODER_MSK);
+    AFRL_A &=  (GPIOA_PIN2_AFRL_MSK & GPIOA_PIN3_AFRL_MSK);
     
     MODER_A |= (GPIOA_PIN2_MODE_ALTFUNC | GPIOA_PIN3_MODE_ALTFUNC);
     AFRL_A |= (GPIOA_PIN2_AF7_USART2_TX | GPIOA_PIN3_AF7_USART2_RX);

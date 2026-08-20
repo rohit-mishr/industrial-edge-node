@@ -5,6 +5,7 @@ add_executable(bootloader
     src/startup.c
     src/usart.c
     src/flash.c
+    src/button.c
 )
 
 target_include_directories(bootloader PRIVATE
