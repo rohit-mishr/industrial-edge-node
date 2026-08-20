@@ -1,8 +1,14 @@
 # 1. Define our target executable and its source files 
 # (We will write main.c shortly)
 add_executable(bootloader
-    main.c
-    startup.c
+    src/main.c
+    src/startup.c
+    src/usart.c
+    src/flash.c
+)
+
+target_include_directories(bootloader PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/inc
 )
 
 # 2. Point to our custom linker script (We will write this next)
