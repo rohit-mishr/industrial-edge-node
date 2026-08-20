@@ -37,6 +37,7 @@
 #define GPIO_A_ODR_PIN5_POS             5
 #define GPIO_A_ODR_PIN5_SET             (1U << GPIO_A_ODR_PIN5_POS)
 #define GPIO_A_ODR_PIN5_RESET           ~(1U << GPIO_A_ODR_PIN5_POS)
+#define GPIO_A_ODR_PIN5                 ((GPIO_A_ODR >> GPIO_A_ODR_PIN5_POS)&(1U << 0))
 
 // GPIOA AFRL (Alternate Function Low) Macros 
 // AF7 = USART2 Routing
