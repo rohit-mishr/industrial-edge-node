@@ -13,6 +13,20 @@ endif()
 # Define the STM32F446xx flag so the ST HAL headers know which exact chip we are using
 add_compile_definitions(STM32F446xx)
 
-# 5. Tell CMake to go look inside these folders for more CMake instructions
-# (We will create these next)
-add_subdirectory(bootloader)
+# ==========================================
+# 5. BUILD OPTIONS
+# ==========================================
+# These create command-line arguments. 'ON' is the default if not specified.
+option(BUILD_BOOTLOADER "Build the bootloader" ON)
+option(BUILD_APP "Build the main application" ON)
+
+# 6. Conditionally include the subdirectories
+if(BUILD_BOOTLOADER)
+    message(STATUS "Including Bootloader in the build...")
+    add_subdirectory(bootloader)
+endif()
+
+if(BUILD_APP)
+    message(STATUS "Including Application in the build...")
+    add_subdirectory(application)
+endif()
