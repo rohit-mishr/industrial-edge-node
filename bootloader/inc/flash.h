@@ -80,6 +80,8 @@
 /* Sector Number (SNB) Configuration [Bits 6:3] */
 #define FLASH_CR_SNB_MSK    (~(0x0FU << FLASH_CR_SNB_POS)) // Mask to clear SNB bits
 #define FLASH_CR_SNB_SEC_2  (2U   << FLASH_CR_SNB_POS)     // Value to select Sector 2
+#define FLASH_CR_SNB_SEC_5  (5U << FLASH_CR_SNB_POS) // Value to select Sector 5
+#define FLASH_CR_SNB_SEC_6  (6U << FLASH_CR_SNB_POS) // Value to select Sector 6
 
 /* Program Size (PSIZE) Configuration [Bits 9:8] */
 #define FLASH_CR_PSIZE_MSK  (~(3U << FLASH_CR_PSIZE_POS))  // Mask to clear PSIZE bits
