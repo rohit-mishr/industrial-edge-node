@@ -15,4 +15,4 @@ add_compile_definitions(STM32F446xx)
 
 # 5. Tell CMake to go look inside these folders for more CMake instructions
 # (We will create these next)
-add_subdirectory(bootloader)
+add_subdirectory(application)
